@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mapping Police Violence Dashboard</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/keen-dashboards.css" />
+        <link rel="stylesheet" type="text/css" href="js/c3/c3.css" />
+        <link rel="stylesheet" type="text/css" href="css/custom.css" />
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/d3/d3.min.js"></script>
+        <script type="text/javascript" src="js/c3/c3.min.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+        <script type="text/javascript" src="js/datamaps.usa.min.js"></script>
+        <script type="text/javascript" src="js/dashboard.js"></script>
+    </head>
+    <body class="application">
+        <div class="container-fluid">
+            <h1>Mapping Police Violence</h1>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h4>Police are killing Black people at persistently high rates.</h4>
+                    <div class="chart-wrapper">
+                        <div class="chart-title">
+                            Black people killed by police by month, 2013-2015
+                        </div>
+                        <div class="chart-stage">
+                            <div id="monthsChart"></div>
+                        </div>
+                        <div class="chart-notes"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- end of row -->
+            
+            <div class="row">
+                <h4>Black people are most likely to be killed by police.</h4>
+                <div class="col-sm-6">
+                    <div class="chart-wrapper">
+                        <div class="chart-title">
+                            Black people are nearly 3x more likely to be killed by police than white people
+                        </div>
+                        <div class="chart-stage">
+                            <h5>Rate of people killed by police per 1 million residents, 2014</h5>
+                            <div id="ratesChart"></div>
+                        </div>
+                        <div class="chart-notes"></div>
+                    </div>
+                </div>
+                
+                <div class="col-sm-6">
+                    <div class="chart-wrapper">
+                        <div class="chart-title">
+                            Black victims are more likely to be unarmed.
+                        </div>
+                        <div class="chart-stage">
+                            <h5>Percent of victims reported unarmed, 2013-2015</h5>
+                            <div id="armedChart"></div>
+                        </div>
+                        <div class="chart-notes"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- end of row -->
+            
+            <div class="row">
+                <h4>Where you live matters.</h4>
+                <div class="col-sm-6">
+                    <div class="chart-wrapper">
+                        <div class="chart-title">
+                            States have different rates of police violence.
+                        </div>
+                        <div class="chart-stage">
+                            <h5>People killed by police per 1 million residents by state, 2014</h5>
+                            <div id="statesChart"></div>
+                        </div>
+                        <div class="chart-notes"></div>
+                    </div>
+                </div>
+                
+                <div class="col-sm-6">
+                    <div class="chart-wrapper">
+                        <div class="chart-title">
+                            Cities have different rates as well.
+                        </div>
+                        <div class="chart-stage">
+                            <h5>People killed by police per 1 million residents, 60 largest cities, 2014</h5>
+                            <button id="ratelink">Show rate</button>
+                            <button id="numlink">Show number</button>
+                            <div id="citiesChart"></div>
+                        </div>
+                        <div class="chart-notes"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <h4></h4>
+                <div class="col-sm-6">
+                    <div class="chart-wrapper">
+                        <div class="chart-title">
+                            Police are rarely held accountable.
+                        </div>
+                        <div class="chart-stage">
+                            <h5>Were officers who killed people charged with a crime?</h5>
+                            <div id="chargesChart"></div>
+                        </div>
+                        <div class="chart-notes"></div>
+                    </div>
+                </div>
+                
+                <div class="col-sm-6">
+                    <div class="chart-wrapper">
+                        <div class="chart-title"></div>
+                        <div class="chart-stage">
+                            <h5></h5>
+                            <div id="extraChart"></div>
+                        </div>
+                        <div class="chart-notes"></div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <p class="small text-muted">Data analyzed by <a href="http://mappingpoliceviolence.org/">Mapping Police Violence</a>. Built with Keen IO, d3.js, c3.js, Datamaps, and Bootstrap.</p>
+            <p class="small text-muted">Police badge icon made by <a href="http://www.flaticon.com/authors/scott-de-jonge" title="Scott de Jonge">Scott de Jonge</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>, licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></p>
+        </div>
+    </body>
+</html>
