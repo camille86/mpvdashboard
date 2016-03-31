@@ -207,7 +207,7 @@ function charges() {
         .attr('xlink:href', '#iconCustom')
         .attr('x', function(d) {
           var rem = d % cols;
-          console.log(d);
+          // console.log(d);
           return rem * xpad;
         })
         .attr('y', function(d) {
