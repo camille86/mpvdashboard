@@ -12,7 +12,7 @@ var monthsChart = c3.generate({
        colors: {
          num: '#9b0b45'  
        },
-       url: '/data/blk_count.csv'
+       url: '/mpvdashboard/data/blk_count.csv'
    },
    axis: {
        x: {
@@ -47,7 +47,7 @@ var monthsChart = c3.generate({
 var ratesChart = c3.generate({
     bindto: '#ratesChart',
     data: {
-        url: '/data/rates.csv',
+        url: '/mpvdashboard/data/rates.csv',
         type: 'bar',
         x: 'race',
         y: 'rate',
@@ -86,7 +86,7 @@ var ratesChart = c3.generate({
 var armedChart = c3.generate({
    bindto: '#armedChart',
    data: {
-       url: '/data/armed3.csv',
+       url: '/mpvdashboard/data/armed3.csv',
        type: 'bar',
        groups: [['un2', 'arm2']],
        x: 'race',
@@ -125,7 +125,7 @@ var armedChart = c3.generate({
 var citiesChart = c3.generate({
   bindto: '#citiesChart',
   data: {
-    url: '/data/cities.csv',
+    url: '/mpvdashboard/data/cities.csv',
     type: 'bar',
     x: 'name',
     y: 'rate',
@@ -240,6 +240,7 @@ function charges() {
       .attr('x', 24)
       .attr('y', 8)
       .attr('dy', '.4em')
+      .attr('font-size', 'small')
       .text(function(d) { return d.name; });
         
 }
@@ -247,7 +248,7 @@ function charges() {
 function map() {
     var dataset = {};
 
-    d3.csv('/data/stateRates.csv', function(data) {
+    d3.csv('/mpvdashboard/data/stateRates.csv', function(data) {
   
 
       var onlyVals = data.map(function(d) {
