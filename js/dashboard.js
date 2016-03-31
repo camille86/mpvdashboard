@@ -240,6 +240,7 @@ function charges() {
       .attr('x', 24)
       .attr('y', 8)
       .attr('dy', '.4em')
+      .attr('font-size', 'small')
       .text(function(d) { return d.name; });
         
 }
